@@ -4,6 +4,11 @@ public class DD_CrossType {
     private String constType;
     private String constDes;
 
+    public DD_CrossType(String constType, String constDes) {
+        this.constType = constType;
+        this.constDes = constDes;
+    }
+
     public String getConstType() {
         return constType;
     }

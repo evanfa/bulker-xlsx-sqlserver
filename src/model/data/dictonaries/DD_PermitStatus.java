@@ -4,6 +4,11 @@ public class DD_PermitStatus {
     private String permitStatus;
     private String permitDes;
 
+    public DD_PermitStatus(String permitStatus, String permitDes) {
+        this.permitStatus = permitStatus;
+        this.permitDes = permitDes;
+    }
+
     public String getPermitStatus() {
         return permitStatus;
     }
