@@ -47,7 +47,6 @@ public class DataStructures_Utility {
     public static String getDataTypeObject(Object o) {
         return o.getClass().getSimpleName();
     }
-
     /**
      * Function that returns DataType Name of an Array of Objects
      * @param objT Object Array
