@@ -30,13 +30,11 @@ public class DataStructures_Utility {
                 result.append(scan.next());
                 result.append(newString);
             }
-            //return result.toString();
             strResult = result.toString();
         } catch (Exception e) {
             // TODO: handle exception
             System.out.println("Error Replacer : " + e.getMessage());
             e.printStackTrace();
-            //return result.toString();
         }
         return strResult;
     }
