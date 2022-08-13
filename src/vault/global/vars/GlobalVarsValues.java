@@ -7,6 +7,7 @@ public class GlobalVarsValues {
     public static final int JDBC_PORT = 1433;
     public static final String DEFAULT_SERVER_CLASS = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
     public static final String DEFAULT_FOLDER_SITE = "C:\\Users\\Public\\tempfiles";
+    public static final String sqlSerClass = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 
     public static String getDefaultHost() {
         return DEFAULT_HOST;
