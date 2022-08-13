@@ -12,19 +12,15 @@ public class GlobalVarsValues {
     public static String getDefaultHost() {
         return DEFAULT_HOST;
     }
-
     public static String getDefaultDb() {
         return DEFAULT_DB;
     }
-
     public static String getDefaultTable() {
         return DEFAULT_TABLE;
     }
-
     public static int getJdbcPort() {
         return JDBC_PORT;
     }
-
     public static String getDefaultFolderSite() {
         return DEFAULT_FOLDER_SITE;
     }
