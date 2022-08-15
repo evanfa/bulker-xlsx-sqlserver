@@ -1,7 +1,6 @@
 package model.data.db;
 
 import vault.global.vars.GlobalVarsValues;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 
