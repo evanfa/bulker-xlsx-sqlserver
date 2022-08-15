@@ -27,6 +27,5 @@ hs_err_pid*
 replay_pid*
 # End of https://www.toptal.com/developers/gitignore/api/java
 src/vault/globa l/vars/GlobalVarsValues.java
-src/vault/
 .idea
 out

@@ -1,8 +1,9 @@
 package model.data.db;
 
+import vault.global.vars.GlobalVarsValues;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
-import vault.global.vars.GlobalVarsValues;
 
 //-Djava.library.path="C:\Users\fabio_rodriguez\OneDrive - TransCanada Corporation\Documents\IT\JODBC\;${env_var:PATH}"
 public class Db_Connect {
