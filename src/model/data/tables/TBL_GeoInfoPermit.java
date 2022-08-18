@@ -6,6 +6,7 @@ public class TBL_GeoInfoPermit {
     private float coordLatitude;
     private float coordLongitude;
     private String spreadPermit;
+    private int idPermit;
 
     public TBL_GeoInfoPermit(int municipalityPermit, int statePermit, float coordLatitude, float coordLongitude, String spreadPermit) {
         this.municipalityPermit = municipalityPermit;
