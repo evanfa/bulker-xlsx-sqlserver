@@ -5,6 +5,12 @@ public class DD_State {
     private String stateDes;
     private String acronimState;
 
+    public DD_State(int idState, String stateDes, String acronimState) {
+        this.idState = idState;
+        this.stateDes = stateDes;
+        this.acronimState = acronimState;
+    }
+
     public int getIdState() {
         return idState;
     }
@@ -26,12 +32,6 @@ public class DD_State {
     }
 
     public void setAcronimState(String acronimState) {
-        this.acronimState = acronimState;
-    }
-
-    public DD_State(int idState, String stateDes, String acronimState) {
-        this.idState = idState;
-        this.stateDes = stateDes;
         this.acronimState = acronimState;
     }
 }

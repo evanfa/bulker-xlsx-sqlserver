@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class DataStructures_Utility {
     /**
      * Function that retur last item in List<String>
+     *
      * @param list input string list
      * @return retrieve last item from list
      */
@@ -15,6 +16,7 @@ public class DataStructures_Utility {
 
     /**
      * Function that replace found characters in another string
+     *
      * @param inputString
      * @param matchToReplace
      * @param newString
@@ -41,14 +43,17 @@ public class DataStructures_Utility {
 
     /**
      * Function GETs DataType Name of an object
+     *
      * @param o Object Type
      * @return Object DataType by it's name
      */
     public static String getDataTypeObject(Object o) {
         return o.getClass().getSimpleName();
     }
+
     /**
      * Function that returns DataType Name of an Array of Objects
+     *
      * @param objT Object Array
      */
     public static void getDataTypeObject(Object[] objT) {

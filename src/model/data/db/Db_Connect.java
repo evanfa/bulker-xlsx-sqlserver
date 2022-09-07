@@ -1,6 +1,7 @@
 package model.data.db;
 
 import vault.global.vars.GlobalVarsValues;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 
@@ -9,6 +10,7 @@ public class Db_Connect {
 
     /**
      * Function that returns a connection with the default host and the required Database
+     *
      * @param db DatabaseName
      * @return Connection
      */
@@ -27,5 +29,5 @@ public class Db_Connect {
         }
         return con;
     }
-    
+
 }

@@ -1,9 +1,9 @@
 package model.data.dictonaries;
 
 public class DD_TransactStatus {
-     private int idTransact;
-     private String transactStatus;
-     private String transactDes;
+    private int idTransact;
+    private String transactStatus;
+    private String transactDes;
 
     public DD_TransactStatus(int idTransact, String transactStatus, String transactDes) {
         this.idTransact = idTransact;

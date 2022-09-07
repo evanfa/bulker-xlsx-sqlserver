@@ -5,6 +5,12 @@ public class DD_Agency {
     private String agencyName;
     private String agencyDes;
 
+    public DD_Agency(int idAgency, String agencyName, String agencyDes) {
+        this.idAgency = idAgency;
+        this.agencyName = agencyName;
+        this.agencyDes = agencyDes;
+    }
+
     public int getIdAgency() {
         return idAgency;
     }
@@ -26,12 +32,6 @@ public class DD_Agency {
     }
 
     public void setAgencyDes(String agencyDes) {
-        this.agencyDes = agencyDes;
-    }
-
-    public DD_Agency(int idAgency, String agencyName, String agencyDes) {
-        this.idAgency = idAgency;
-        this.agencyName = agencyName;
         this.agencyDes = agencyDes;
     }
 }
