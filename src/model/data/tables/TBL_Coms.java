@@ -25,7 +25,7 @@ public class TBL_Coms {
     private boolean validRecord = false;
 
     public TBL_Coms() throws ClassNotFoundException, SQLException {
-        Comm permitItem = new Comm();
+        TBL_Comm permitItem = new TBL_Comm();
 
         File directoryPath = new File(GlobalVarsValues.DEFAULT_PATH_COMS);
         String[] contents = directoryPath.list();

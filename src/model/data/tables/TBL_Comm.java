@@ -3,7 +3,7 @@ package model.data.tables;
 import controller.utils.Regex_Utility;
 import vault.global.vars.GlobalVarsValues;
 
-public class Comm {
+public class TBL_Comm {
     private String idCom;
     private String dateCom;
     private String dateRecepit;
@@ -14,7 +14,7 @@ public class Comm {
     private String descriptionCom;
     private String referencesCom;
 
-    public Comm(String idCom, String dateCom, String dateRecepit, String typeCom, String subjectCom, String author, String received, String descriptionCom, String referencesCom) {
+    public TBL_Comm(String idCom, String dateCom, String dateRecepit, String typeCom, String subjectCom, String author, String received, String descriptionCom, String referencesCom) {
         this.idCom = idCom;
         this.dateCom = dateCom;
         this.dateRecepit = dateRecepit;
@@ -26,7 +26,7 @@ public class Comm {
         this.referencesCom = referencesCom;
     }
 
-    public Comm() {
+    public TBL_Comm() {
     }
 
 
