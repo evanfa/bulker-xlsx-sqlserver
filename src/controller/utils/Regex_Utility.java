@@ -114,40 +114,40 @@ public class Regex_Utility {
 
             for (String lst : lstMonths) {
                 if (matcher.group(2).equals(lst)) {
-                    if (lst == "January" || lst == "Enero" || lst == "Ene" || lst == "Jan") {
+                    if (lst.equals("January") || lst.equals("Enero") || lst.equals("Ene") || lst.equals("Jan")) {
                         montString = "01";
                     }
-                    if (lst == "February" || lst == "Febrero" || lst == "Feb") {
+                    if (lst.equals("February") || lst.equals("Febrero") || lst.equals("Feb")) {
                         montString = "02";
                     }
-                    if (lst == "March" || lst == "Marzo" || lst == "Mar") {
+                    if (lst.equals("March") || lst.equals("Marzo") || lst.equals("Mar")) {
                         montString = "03";
                     }
-                    if (lst == "April" || lst == "Abril" || lst == "Apr" || lst == "Abr") {
+                    if (lst.equals("April") || lst.equals("Abril") || lst.equals("Apr") || lst.equals("Abr")) {
                         montString = "04";
                     }
-                    if (lst == "May" || lst == "Mayo") {
+                    if (lst.equals("May") || lst.equals("Mayo")) {
                         montString = "05";
                     }
-                    if (lst == "June" || lst == "Junio" || lst == "Jun") {
+                    if (lst.equals("June") || lst.equals("Junio") || lst.equals("Jun")) {
                         montString = "06";
                     }
-                    if (lst == "July" || lst == "Julio" || lst == "Jul") {
+                    if (lst.equals("July") || lst.equals("Julio") || lst.equals("Jul")) {
                         montString = "07";
                     }
-                    if (lst == "August" || lst == "Agosto" || lst == "Aug" || lst == "Ago") {
+                    if (lst.equals("August") || lst.equals("Agosto") || lst.equals("Aug") || lst.equals("Ago")) {
                         montString = "08";
                     }
-                    if (lst == "September" || lst == "Septiembre" || lst == "Sep") {
+                    if (lst.equals("September") || lst.equals("Septiembre") || lst.equals("Sep")) {
                         montString = "09";
                     }
-                    if (lst == "October" || lst == "Octubre" || lst == "Oct") {
+                    if (lst.equals("October") || lst.equals("Octubre") || lst.equals("Oct")) {
                         montString = "10";
                     }
-                    if (lst == "November" || lst == "Noviembre" || lst == "Nov") {
+                    if (lst.equals("November") || lst.equals("Noviembre") || lst.equals("Nov")) {
                         montString = "11";
                     }
-                    if (lst == "December" || lst == "Diciembre" || lst == "Decembere" || lst == "Dic" || lst == "Dec") {
+                    if (lst.equals("December") || lst.equals("Diciembre") || lst.equals("Decembere") || lst.equals("Dic") || lst.equals("Dec")) {
                         montString = "12";
                     }
                 }
@@ -164,40 +164,40 @@ public class Regex_Utility {
         } else if (matcherInv.find()) {
             for (String lst : lstMonths) {
                 if (matcherInv.group(4).equals(lst)) {
-                    if (lst == "January" || lst == "Enero" || lst == "Ene" || lst == "Jan") {
+                    if (lst.equals("January") || lst.equals("Enero") || lst.equals("Ene") || lst.equals("Jan")) {
                         montString = "01";
                     }
-                    if (lst == "February" || lst == "Febrero" || lst == "Feb") {
+                    if (lst.equals("February") || lst.equals("Febrero") || lst.equals("Feb")) {
                         montString = "02";
                     }
-                    if (lst == "March" || lst == "Marzo" || lst == "Mar") {
+                    if (lst.equals("March") || lst.equals("Marzo") || lst.equals("Mar")) {
                         montString = "03";
                     }
-                    if (lst == "April" || lst == "Abril" || lst == "Abr" || lst == "Apr") {
+                    if (lst.equals("April") || lst.equals("Abril") || lst.equals("Abr") || lst.equals("Apr")) {
                         montString = "04";
                     }
-                    if (lst == "May" || lst == "Mayo") {
+                    if (lst.equals("May") || lst.equals("Mayo")) {
                         montString = "05";
                     }
-                    if (lst == "June" || lst == "Junio" || lst == "Jun") {
+                    if (lst.equals("June") || lst.equals("Junio") || lst.equals("Jun")) {
                         montString = "06";
                     }
-                    if (lst == "July" || lst == "Julio" || lst == "Jul") {
+                    if (lst.equals("July") || lst.equals("Julio") || lst.equals("Jul")) {
                         montString = "07";
                     }
-                    if (lst == "August" || lst == "Agosto" || lst == "Ago" || lst == "Aug") {
+                    if (lst.equals("August") || lst.equals("Agosto") || lst.equals("Ago") || lst.equals("Aug")) {
                         montString = "08";
                     }
-                    if (lst == "September" || lst == "Septiembre" || lst == "Sep") {
+                    if (lst.equals("September") || lst.equals("Septiembre") || lst.equals("Sep")) {
                         montString = "09";
                     }
-                    if (lst == "October" || lst == "Octubre" || lst == "Oct") {
+                    if (lst.equals("October") || lst.equals("Octubre") || lst.equals("Oct")) {
                         montString = "10";
                     }
-                    if (lst == "November" || lst == "Noviembre" || lst == "Nov") {
+                    if (lst.equals("November") || lst.equals("Noviembre") || lst.equals("Nov")) {
                         montString = "11";
                     }
-                    if (lst == "December" || lst == "Diciembre" || lst == "Decembere" || lst == "Dec" || lst == "Dic") {
+                    if (lst.equals("December") || lst.equals("Diciembre") || lst.equals("Decembere") || lst.equals("Dec") || lst.equals("Dic")) {
                         montString = "12";
                     }
                 }
@@ -217,40 +217,40 @@ public class Regex_Utility {
         } else if (matcherDMMMMY.find()) {
             for (String lst : lstMonths) {
                 if (matcherDMMMMY.group(3).equals(lst)) {
-                    if (lst == "January" || lst == "Enero" || lst == "Ene" || lst == "Jan") {
+                    if (lst.equals("January") || lst.equals("Enero") || lst.equals("Ene") || lst.equals("Jan")) {
                         montString = "01";
                     }
-                    if (lst == "February" || lst == "Febrero" || lst == "Feb") {
+                    if (lst.equals("February") || lst.equals("Febrero") || lst.equals("Feb")) {
                         montString = "02";
                     }
-                    if (lst == "March" || lst == "Marzo" || lst == "Mar") {
+                    if (lst.equals("March") || lst.equals("Marzo") || lst.equals("Mar")) {
                         montString = "03";
                     }
-                    if (lst == "April" || lst == "Abril" || lst == "Apr" || lst == "Abr") {
+                    if (lst.equals("April") || lst.equals("Abril") || lst.equals("Apr") || lst.equals("Abr")) {
                         montString = "04";
                     }
-                    if (lst == "May" || lst == "Mayo") {
+                    if (lst.equals("May") || lst.equals("Mayo")) {
                         montString = "05";
                     }
-                    if (lst == "June" || lst == "Junio" || lst == "Jun") {
+                    if (lst.equals("June") || lst.equals("Junio") || lst.equals("Jun")) {
                         montString = "06";
                     }
-                    if (lst == "July" || lst == "Julio" || lst == "Jul") {
+                    if (lst.equals("July") || lst.equals("Julio") || lst.equals("Jul")) {
                         montString = "07";
                     }
-                    if (lst == "August" || lst == "Agosto" || lst == "Aug" || lst == "Ago") {
+                    if (lst.equals("August") || lst.equals("Agosto") || lst.equals("Aug") || lst.equals("Ago")) {
                         montString = "08";
                     }
-                    if (lst == "September" || lst == "Septiembre" || lst == "Sep") {
+                    if (lst.equals("September") || lst.equals("Septiembre") || lst.equals("Sep")) {
                         montString = "09";
                     }
-                    if (lst == "October" || lst == "Octubre" || lst == "Oct") {
+                    if (lst.equals("October") || lst.equals("Octubre") || lst.equals("Oct")) {
                         montString = "10";
                     }
-                    if (lst == "November" || lst == "Noviembre" || lst == "Nov") {
+                    if (lst.equals("November") || lst.equals("Noviembre") || lst.equals("Nov")) {
                         montString = "11";
                     }
-                    if (lst == "December" || lst == "Diciembre" || lst == "Decembere" || lst == "Dec" || lst == "Dic") {
+                    if (lst.equals("December") || lst.equals("Diciembre") || lst.equals("Decembere") || lst.equals("Dec") || lst.equals("Dic")) {
                         montString = "12";
                     }
                 }

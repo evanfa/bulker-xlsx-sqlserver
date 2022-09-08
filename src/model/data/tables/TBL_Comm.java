@@ -65,12 +65,11 @@ public class TBL_Comm {
             } else {
                 //TODO Verify when is possible fix date format and if not replacer
 
-                if(Regex_Utility.isRegexContainedIntoSingleString(GlobalVarsValues.REGEX_DATE_OK, Regex_Utility.fixEnglishDateFormatToSQLDateFormat(dateCom))){
+                if (Regex_Utility.isRegexContainedIntoSingleString(GlobalVarsValues.REGEX_DATE_OK, Regex_Utility.fixEnglishDateFormatToSQLDateFormat(dateCom))) {
                     this.dateCom = Regex_Utility.fixEnglishDateFormatToSQLDateFormat(dateCom);
-                }else{
+                } else {
                     this.dateCom = "";
                 }
-
             }
         } else {
             this.dateCom = "";

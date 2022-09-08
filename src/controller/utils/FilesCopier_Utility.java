@@ -22,13 +22,10 @@ public class FilesCopier_Utility {
     }
 
     public static void fileCopier(File input, File output) {
-
         try {
             if (input.exists()) {
-
+                copyFileUsingStream(input, output);
             }
-            copyFileUsingStream(input, output);
-
         } catch (IOException e) {
             e.printStackTrace();
         }

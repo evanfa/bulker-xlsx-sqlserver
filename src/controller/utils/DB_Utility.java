@@ -13,8 +13,6 @@ public class DB_Utility {
             System.out.println("Driver Loaded");
             String jdbcUrl = "jdbc:sqlserver://" + GlobalVarsValues.DEFAULT_HOST + ":" + GlobalVarsValues.JDBC_PORT + ";databaseName=" + db + ";integratedSecurity=true";
             con = DriverManager.getConnection(jdbcUrl);
-            //Statement stmt = con.createStatement();
-            //stmt.executeQuery("SET NOCOUNT ON");
         } catch (Exception e) {
             System.out.println("Error: " + e);
             return null;

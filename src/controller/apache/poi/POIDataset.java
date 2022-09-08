@@ -16,9 +16,9 @@ import java.util.List;
 
 public class POIDataset {
 
+    static final List<String> listPermits;
     static int incidencesFound = 0;
     static int currentRow = 0;
-    static List<String> listPermits;
     static boolean validRecordFound = false;
     static String currentFileName;
 
@@ -177,14 +177,6 @@ public class POIDataset {
 
             case STRING:
                 /*TODO Pre-validation if data format is no YYYY-MM-DD aplies string conversion*/
-                /*if (currentCell.getColumnIndex() == 1 || currentCell.getColumnIndex() == 2) {
-                    if (currentCell.getRichStringCellValue().toString().equals("NA") ||
-                            currentCell.getRichStringCellValue().toString().equals("N/A")) {
-                        tempStr = null;
-                    } else {
-                        tempStr = Regex_Utility.fixEnglishDateFormatToSQLDateFormat(currentCell.getRichStringCellValue().toString());
-                    }
-                } */
                 if (currentCell.getColumnIndex() == 1 || currentCell.getColumnIndex() == 2) {
                     if (currentCell.getRichStringCellValue().toString().equals("NA") ||
                             currentCell.getRichStringCellValue().toString().equals("N/A")) {
@@ -306,7 +298,7 @@ public class POIDataset {
                     System.out.println("> " + listRecords.get(i));
 
                     if (i == POIDataset.getListPermits().size() - 1) { //Last Item
-                        if (listRecords.get(i) == "null") {
+                        if (listRecords.get(i).equals("null")) {
                             tst = tst.concat("" + null + ")"); //Verify when its lost a column (8) column
                         } else {
                             tst = tst.concat("'" + listRecords.get(i) + "')");
@@ -345,7 +337,7 @@ public class POIDataset {
 
                     //Finding Common records
                     if (i == sizeList - 1) { //Last Item
-                        if (listRecords.get(i) == "null") {
+                        if (listRecords.get(i).equals("null")) {
                             tst = tst.concat("" + null + ")"); //Verify when its lost a column (8) column
                         } else {
                             tst = tst.concat("'" + listRecords.get(i) + "')");
@@ -382,7 +374,7 @@ public class POIDataset {
                 listRecords.add(null);
                 for (int i = 1; i < sizeList; i++) {
                     if (i == sizeList - 1) { //Last Item
-                        if (listRecords.get(i) == "null") {
+                        if (listRecords.get(i).equals("null")) {
                             tst = tst.concat("" + null + ")"); //Verify when its lost a column (8) column
                         } else { //Non Last Item
                             if (i == 1) {
