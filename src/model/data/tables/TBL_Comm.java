@@ -63,7 +63,14 @@ public class TBL_Comm {
                 this.dateCom = dateCom;
                 /*  If Date is NOT in Correct Format, Fix the String    */
             } else {
-                this.dateCom = Regex_Utility.fixEnglishDateFormatToSQLDateFormat(dateCom);
+                //TODO Verify when is possible fix date format and if not replacer
+
+                if(Regex_Utility.isRegexContainedIntoSingleString(GlobalVarsValues.REGEX_DATE_OK, Regex_Utility.fixEnglishDateFormatToSQLDateFormat(dateCom))){
+                    this.dateCom = Regex_Utility.fixEnglishDateFormatToSQLDateFormat(dateCom);
+                }else{
+                    this.dateCom = "";
+                }
+
             }
         } else {
             this.dateCom = "";
