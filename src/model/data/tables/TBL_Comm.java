@@ -58,9 +58,6 @@ public class TBL_Comm {
     public void setDateCom(String dateCom) {
         /* Input String is not empty */
         if (dateCom != null) {
-            System.out.println("Input Data Value: " + dateCom);
-            System.out.println("In Function!!!!!!!!!");
-
             /*  If Date is in Correct Format    */
             if (Regex_Utility.isRegexContainedIntoSingleString(GlobalVarsValues.REGEX_DATE_OK, dateCom)) {
                 this.dateCom = dateCom;
@@ -71,21 +68,6 @@ public class TBL_Comm {
         } else {
             this.dateCom = "";
         }
-
-        // if (!dateCom.equals(null) || !dateCom.equals("null") || dateCom != "null") {
-        /*if(!dateCom.equals(null)){
-            String tempValidityDate;
-            if (Regex_Utility.isRegexContainedIntoSingleString(GlobalVarsValues.REGEX_DATE_OK, dateCom)) {
-                this.dateCom = dateCom;
-            } else {
-                tempValidityDate = Regex_Utility.fixEnglishDateFormatToSQLDateFormat(dateCom);
-                //System.out.println("Date Result: " + tempValidityDate);
-                this.dateCom = tempValidityDate;
-            }
-        } else {
-            this.dateCom = "";
-        }*/
-
     }
 
     public String getDateRecepit() {
@@ -93,24 +75,7 @@ public class TBL_Comm {
     }
 
     public void setDateRecepit(String dateRecepit) {
-        /*System.out.println("Input Date Recepit: " + dateRecepit+ "Class: "+dateRecepit.getClass());
         if (dateRecepit != null) {
-            String tempValidityDate;
-            if (Regex_Utility.isRegexContainedIntoSingleString(GlobalVarsValues.REGEX_DATE_OK, dateRecepit)) {
-                this.dateRecepit = dateRecepit;
-            } else {
-                tempValidityDate = Regex_Utility.fixEnglishDateFormatToSQLDateFormat(dateRecepit);
-                System.out.println("Date Result: " + tempValidityDate);
-                this.dateRecepit = tempValidityDate;
-            }
-        } else {
-            this.dateRecepit = "";
-        }*/
-
-        if (dateRecepit != null) {
-            System.out.println("Input Data Value: " + dateRecepit);
-            System.out.println("In Function!!!!!!!!!");
-
             /*  If Date is in Correct Format    */
             if (Regex_Utility.isRegexContainedIntoSingleString(GlobalVarsValues.REGEX_DATE_OK, dateRecepit)) {
                 this.dateRecepit = dateRecepit;

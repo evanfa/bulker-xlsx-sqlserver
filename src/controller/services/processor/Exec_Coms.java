@@ -64,20 +64,8 @@ public class Exec_Coms {
                                         Cell cell = cellIterator.next();
 
                                         if (cell.getRowIndex() >= 7) {
-                                            //System.out.println("In: "+cell.toString());
-                                            if (cell.getColumnIndex() == 0 /*&& cell.getRowIndex() == 6*/) {
-                                                //System.out.println("Val: "+cell.toString());
-
-                                                //System.out.println("Found: "+Regex_Utility.isRegexContainedIntoSingleString(GlobalVarsValues.REGEX_META_COM,cell.toString()));
-
-                                                        /*if (cell.getCellType() != CellType.BLANK && !cell.toString().equals("")) {
-
-                                                                setValidRecord(true);
-
-                                                        }*/
-
+                                            if (cell.getColumnIndex() == 0) {
                                                 setValidRecord(Regex_Utility.isRegexContainedIntoSingleString(GlobalVarsValues.REGEX_META_COM, cell.toString()));
-
                                             }
 
                                             if (isValidRecord() && cell.getColumnIndex() <= noOfColumns) {
