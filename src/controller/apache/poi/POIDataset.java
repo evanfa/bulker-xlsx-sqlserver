@@ -147,7 +147,7 @@ public class POIDataset {
                 break;
 
             case BLANK:
-                tempStr = null;
+                //tempStr = null;
                 break;
 
             case FORMULA:
@@ -177,19 +177,30 @@ public class POIDataset {
 
             case STRING:
                 /*TODO Pre-validation if data format is no YYYY-MM-DD aplies string conversion*/
-                if (currentCell.getColumnIndex() == 1 || currentCell.getColumnIndex() == 2) {
-                    if (currentCell.getRichStringCellValue().toString().equals("NA") || currentCell.getRichStringCellValue().toString().equals("N/A")) {
+                /*if (currentCell.getColumnIndex() == 1 || currentCell.getColumnIndex() == 2) {
+                    if (currentCell.getRichStringCellValue().toString().equals("NA") ||
+                            currentCell.getRichStringCellValue().toString().equals("N/A")) {
                         tempStr = null;
                     } else {
                         tempStr = Regex_Utility.fixEnglishDateFormatToSQLDateFormat(currentCell.getRichStringCellValue().toString());
                     }
+                } */
+                if (currentCell.getColumnIndex() == 1 || currentCell.getColumnIndex() == 2) {
+                    if (currentCell.getRichStringCellValue().toString().equals("NA") ||
+                            currentCell.getRichStringCellValue().toString().equals("N/A")) {
+                        tempStr = null;
+                    } else {
+                        if (!currentCell.getRichStringCellValue().equals(null)) {
+                            tempStr = Regex_Utility.fixEnglishDateFormatToSQLDateFormat(currentCell.getRichStringCellValue().toString());
+                        } else {
+                            tempStr = null;
+                        }
 
+                    }
                 } else {
                     tempStr = currentCell.getRichStringCellValue().toString();
                     tempStr = tempStr.replace("\\", "/");
-                    //tempStr = tempStr.replace("{", "(");
                     tempStr = tempStr.replace("'", "");
-                    //tempStr = tempStr.replace("\n", "");
                 }
                 break;
 

@@ -1,8 +1,9 @@
-package model.data.tables;
+package controller.services.processor;
 
 import controller.apache.poi.POIDataset;
 import controller.utils.DB_Utility;
 import controller.utils.Regex_Utility;
+import model.data.tables.TBL_Comm;
 import org.apache.poi.ss.usermodel.*;
 import vault.global.vars.GlobalVarsValues;
 
@@ -15,7 +16,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Iterator;
 
-public class TBL_Coms {
+public class Exec_Coms {
 
     private final String verifyQry = "SELECT COUNT(*) FROM [" + GlobalVarsValues.DEFAULT_BD_NAME + "].[dbo]." + GlobalVarsValues.DEFAULT_TABLE_COMS;
     private final String insertQry = "INSERT INTO [dbo].[" + GlobalVarsValues.DEFAULT_TABLE_COMS + "](idfile,date_com,date_recipt,type_com,subject_com,author,received_ori,desc_com,references_com) VALUES (";
@@ -24,7 +25,7 @@ public class TBL_Coms {
     private int noOfColumns = 0;
     private boolean validRecord = false;
 
-    public TBL_Coms() throws ClassNotFoundException, SQLException {
+    public Exec_Coms() throws ClassNotFoundException, SQLException {
         TBL_Comm permitItem = new TBL_Comm();
 
         File directoryPath = new File(GlobalVarsValues.DEFAULT_PATH_COMS);

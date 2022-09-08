@@ -35,7 +35,12 @@ public class TBL_Comm {
     }
 
     public void setAuthor(String author) {
-        this.author = author;
+        if (author != null) {
+            this.author = author;
+        } else {
+            this.author = "";
+        }
+
     }
 
     public String getIdCom() {
@@ -51,7 +56,24 @@ public class TBL_Comm {
     }
 
     public void setDateCom(String dateCom) {
-        if (!dateCom.equals(null)) {
+        /* Input String is not empty */
+        if (dateCom != null) {
+            System.out.println("Input Data Value: " + dateCom);
+            System.out.println("In Function!!!!!!!!!");
+
+            /*  If Date is in Correct Format    */
+            if (Regex_Utility.isRegexContainedIntoSingleString(GlobalVarsValues.REGEX_DATE_OK, dateCom)) {
+                this.dateCom = dateCom;
+                /*  If Date is NOT in Correct Format, Fix the String    */
+            } else {
+                this.dateCom = Regex_Utility.fixEnglishDateFormatToSQLDateFormat(dateCom);
+            }
+        } else {
+            this.dateCom = "";
+        }
+
+        // if (!dateCom.equals(null) || !dateCom.equals("null") || dateCom != "null") {
+        /*if(!dateCom.equals(null)){
             String tempValidityDate;
             if (Regex_Utility.isRegexContainedIntoSingleString(GlobalVarsValues.REGEX_DATE_OK, dateCom)) {
                 this.dateCom = dateCom;
@@ -60,10 +82,10 @@ public class TBL_Comm {
                 //System.out.println("Date Result: " + tempValidityDate);
                 this.dateCom = tempValidityDate;
             }
-            //this.dateCom = dateCom;
         } else {
             this.dateCom = "";
-        }
+        }*/
+
     }
 
     public String getDateRecepit() {
@@ -71,7 +93,7 @@ public class TBL_Comm {
     }
 
     public void setDateRecepit(String dateRecepit) {
-        System.out.println("Input Date Recepit: " + dateRecepit);
+        /*System.out.println("Input Date Recepit: " + dateRecepit+ "Class: "+dateRecepit.getClass());
         if (dateRecepit != null) {
             String tempValidityDate;
             if (Regex_Utility.isRegexContainedIntoSingleString(GlobalVarsValues.REGEX_DATE_OK, dateRecepit)) {
@@ -83,8 +105,22 @@ public class TBL_Comm {
             }
         } else {
             this.dateRecepit = "";
+        }*/
+
+        if (dateRecepit != null) {
+            System.out.println("Input Data Value: " + dateRecepit);
+            System.out.println("In Function!!!!!!!!!");
+
+            /*  If Date is in Correct Format    */
+            if (Regex_Utility.isRegexContainedIntoSingleString(GlobalVarsValues.REGEX_DATE_OK, dateRecepit)) {
+                this.dateRecepit = dateRecepit;
+                /*  If Date is NOT in Correct Format, Fix the String    */
+            } else {
+                this.dateRecepit = Regex_Utility.fixEnglishDateFormatToSQLDateFormat(dateRecepit);
+            }
+        } else {
+            this.dateRecepit = "";
         }
-        // this.dateRecepit = dateRecepit;
     }
 
     public String getTypeCom() {
@@ -92,7 +128,13 @@ public class TBL_Comm {
     }
 
     public void setTypeCom(String typeCom) {
-        this.typeCom = typeCom;
+
+        if (typeCom != null) {
+            this.typeCom = typeCom;
+        } else {
+            this.typeCom = "";
+        }
+
     }
 
     public String getSubjectCom() {
@@ -108,7 +150,12 @@ public class TBL_Comm {
     }
 
     public void setReceived(String received) {
-        this.received = received;
+        if (received != null) {
+            this.received = received;
+        } else {
+            this.received = "";
+        }
+
     }
 
     public String getDescriptionCom() {
@@ -124,6 +171,11 @@ public class TBL_Comm {
     }
 
     public void setReferencesCom(String referencesCom) {
-        this.referencesCom = referencesCom;
+        if (referencesCom != null) {
+            this.referencesCom = referencesCom;
+        } else {
+            this.referencesCom = "";
+        }
+
     }
 }
