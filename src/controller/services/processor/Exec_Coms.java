@@ -21,14 +21,10 @@ public class Exec_Coms {
     boolean validRecord = false;
 
     public Exec_Coms() throws ClassNotFoundException, SQLException {
-
+        int currentTab = 0;
+        int noOfColumns = 0;
         String verifyQry = "SELECT COUNT(*) FROM [" + GlobalVarsValues.DEFAULT_BD_NAME + "].[dbo]." + GlobalVarsValues.DEFAULT_TABLE_COMS;
         String insertQry = "INSERT INTO [dbo].[" + GlobalVarsValues.DEFAULT_TABLE_COMS + "](idfile,date_com,date_recipt,type_com,subject_com,author,received_ori,desc_com,references_com) VALUES (";
-        int currentTab = 0;
-        DB_Utility DbUtility;
-        int noOfColumns = 0;
-
-
         TBL_Comm permitItem = new TBL_Comm();
 
         File directoryPath = new File(GlobalVarsValues.DEFAULT_PATH_COMS);
@@ -40,7 +36,6 @@ public class Exec_Coms {
                 Connection currentConnection = DB_Utility.startConnection_WAuth(GlobalVarsValues.DEFAULT_BD_NAME);
                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
                 Statement stmt = currentConnection.createStatement();
-
                 ResultSet rs = stmt.executeQuery(verifyQry);
 
                 try {
@@ -149,6 +144,4 @@ public class Exec_Coms {
     private void setValidRecord(boolean validRec) {
         this.validRecord = validRec;
     }
-
-
 }
