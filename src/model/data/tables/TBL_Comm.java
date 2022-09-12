@@ -105,7 +105,6 @@ public class TBL_Comm {
         } else {
             this.typeCom = "";
         }
-
     }
 
     public String getSubjectCom() {
