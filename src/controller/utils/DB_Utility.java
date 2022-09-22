@@ -75,7 +75,7 @@ public class DB_Utility {
                 Connection cn = startConnection_WAuth(GlobalVarsValues.DEFAULT_BD_NAME);
                 Statement st = cn.createStatement();
 
-                String qrt = "INSERT INTO [dbo].[error_log](errordesc,inputdesc) VALUES (´" + errorQry + "´,´" + query + "´)";
+                String qrt = "INSERT INTO [dbo].["+GlobalVarsValues.DEFAULT_ERROR_LOG+"](errordesc,inputdesc) VALUES (´" + errorQry + "´,´" + query + "´)";
 
                 qrt = qrt.replace("'", "");
                 qrt = qrt.replace("´", "'");
