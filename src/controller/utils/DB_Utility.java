@@ -92,4 +92,17 @@ public class DB_Utility {
         }
     }
 
+    public static void execQueryInsert(Connection con, String qry) throws SQLException {
+        try {
+            Statement stmt = con.createStatement();
+            stmt.execute(qry);
+            stmt.closeOnCompletion();
+        } catch (Exception e) {
+            //JOptionPane.showMessageDialog(null, "Query Fails. Verify.", "Error in Query", JOptionPane.ERROR_MESSAGE);
+            System.out.println("Query Fail: " + e);
+            System.out.println("Query: " + qry);
+            e.printStackTrace();
+        }
+    }
+
 }

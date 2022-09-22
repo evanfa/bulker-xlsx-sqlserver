@@ -126,6 +126,8 @@ public class Exec_Coms {
                         }
                     }//for
 
+                    currentConnection.close();
+
                 } catch (IOException e) {
                     e.printStackTrace();
                     currentConnection.close();

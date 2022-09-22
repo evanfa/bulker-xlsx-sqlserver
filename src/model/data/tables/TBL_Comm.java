@@ -29,7 +29,6 @@ public class TBL_Comm {
     public TBL_Comm() {
     }
 
-
     public String getAuthor() {
         return author;
     }
@@ -40,7 +39,6 @@ public class TBL_Comm {
         } else {
             this.author = "";
         }
-
     }
 
     public String getIdCom() {
