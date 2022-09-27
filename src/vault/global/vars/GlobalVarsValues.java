@@ -18,7 +18,6 @@ public class GlobalVarsValues {
     public static final int JDBC_PORT = 1433;
     public static final String SERVER_CLASS = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
     public static final String DEFAULT_FOLDER_SITE = "C:\\Users\\Public\\tempfiles";
-    public static final String sqlSerClass = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
     public static final String REGEX_DATE_OK = "([0-9]{4})-([0-9]{2})-([0-9]{2})";
 
     public static String DEFAULT_PATH_COMS = "C:\\Users\\fabio_rodriguez\\OneDrive - TransCanada Corporation\\Documents\\TGNH\\TVDR_Project\\Bitacoras\\29Apr22\\";

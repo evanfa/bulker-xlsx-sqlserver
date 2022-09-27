@@ -17,7 +17,7 @@ public class Db_Connect {
     public static Connection startConnection_WAuth(String db) {
         Connection con = null;
         try {
-            Class.forName(GlobalVarsValues.sqlSerClass);
+            Class.forName(GlobalVarsValues.SERVER_CLASS);
             System.out.println("Driver Loaded");
             String jdbcUrl = "jdbc:sqlserver://" + GlobalVarsValues.getDefaultHost() + ":" + GlobalVarsValues.getJdbcPort() + ";databaseName=" + db + ";integratedSecurity=true";
             con = DriverManager.getConnection(jdbcUrl);
